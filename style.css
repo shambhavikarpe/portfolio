@@ -144,3 +144,18 @@ nav a {
 @keyframes blink {
     50% { opacity: 0; }
 }
+#certificates h2 {
+    text-align: center;
+}
+
+#certificates a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#certificates a:hover {
+    text-decoration: underline;
+}
