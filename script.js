@@ -72,3 +72,40 @@ function openCert(src) {
 function closeCert() {
     document.getElementById("cert-popup").style.display = "none";
 }
+// Filter certificates
+function filterCert(category) {
+    let cards = document.querySelectorAll(".cert-card");
+
+    cards.forEach(card => {
+        if (category === "all") {
+            card.style.display = "block";
+        } else {
+            if (card.classList.contains(category)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        }
+    });
+}
+
+// 3D tilt based on mouse movement
+document.querySelectorAll(".cert-card").forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        let rect = card.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+
+        let centerX = rect.width / 2;
+        let centerY = rect.height / 2;
+
+        let rotateX = -(y - centerY) / 10;
+        let rotateY = (x - centerX) / 10;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0)";
+    });
+});
