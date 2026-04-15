@@ -38,7 +38,7 @@
 
 <!-- Home -->
 <section id="home" class="home">
-    <img src="images/profile.jpg" class="profile">
+    <img src="images/profile.jpg.jpeg" class="profile">
     <h1>Hi, I'm Shambhavi 👋</h1>
     <h2><span id="typing"></span><span class="cursor">|</span></h2>
     <a href="resume.pdf" download class="btn">Download Resume</a>
@@ -139,23 +139,7 @@
 
     <div class="project-grid">
 
-        <div class="project-card" data-aos="zoom-in">
-            <h3>AI Fundamentals</h3>
-            <p>Completed certification in Artificial Intelligence basics.</p>
-            <a href="certificates/ai-certificate.pdf" target="_blank">View Certificate</a>
-        </div>
-
-        <div class="project-card" data-aos="zoom-in">
-            <h3>Web Development</h3>
-            <p>Learned HTML, CSS, and JavaScript fundamentals.</p>
-            <a href="certificates/web-cert.pdf" target="_blank">View Certificate</a>
-        </div>
-
-        <div class="project-card" data-aos="zoom-in">
-            <h3>Python Programming</h3>
-            <p>Completed Python programming course.</p>
-            <a href="certificates/python-cert.pdf" target="_blank">View Certificate</a>
-        </div>
+        <d
 
     </div>
 </section>
@@ -170,21 +154,47 @@
         <button onclick="filterCert('code')">Programming</button>
     </div>
 
+    
+</section>
+<section id="certificates">
+    <h2 data-aos="fade-up">Certificates</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterCert('all')">All</button>
+        <button onclick="filterCert('ai')">AI</button>
+        <button onclick="filterCert('tech')">Tech</button>
+        <button onclick="filterCert('security')">Security</button>
+    </div>
+
     <div class="project-grid">
 
-        <div class="project-card cert-card ai" onclick="openCert('certificates/ai.png')">
-            <img src="certificates/ai.png" class="cert-img">
-            <h3>AI Fundamentals</h3>
+        <!-- YUVA AI -->
+        <div class="project-card cert-card ai" onclick="openCert('certificates/yuva-ai.png')">
+            <img src="certificates/yuva-ai.png" class="cert-img">
+            <h3>YUVA AI Certification</h3>
+            <p>Artificial Intelligence Program</p>
         </div>
 
-        <div class="project-card cert-card web" onclick="openCert('certificates/web.png')">
-            <img src="certificates/web.png" class="cert-img">
-            <h3>Web Development</h3>
+        <!-- MATLAB -->
+        <div class="project-card cert-card tech" onclick="openCert('certificates/matlab.png')">
+            <img src="certificates/matlab.png" class="cert-img">
+            <h3>MATLAB Certification</h3>
+            <p>Technical computing & simulations</p>
         </div>
 
-        <div class="project-card cert-card code" onclick="openCert('certificates/python.png')">
-            <img src="certificates/python.png" class="cert-img">
-            <h3>Python Programming</h3>
+        <!-- CISO -->
+        <div class="project-card cert-card security" onclick="openCert('certificates/ciso.png')">
+            <img src="certificates/ciso.png" class="cert-img">
+            <h3>CISO Certification</h3>
+            <p>Prompt Engineering</p>
+        </div>
+
+        <!-- ACE -->
+        <div class="project-card cert-card tech" onclick="openCert('certificates/ace.png')">
+            <img src="certificates/ace.png" class="cert-img">
+            <h3>ACE Certification</h3>
+            <p>Applied chemistry for engineering</p>
         </div>
 
     </div>
