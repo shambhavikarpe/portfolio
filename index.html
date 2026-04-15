@@ -1,99 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shambhavi Karpe | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shambhavi Karpe</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- Particles -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 </head>
 <body>
 
-<header>
-    <h2 class="logo">SK.</h2>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div id="particles-js"></div>
+<div class="cursor-glow"></div>
 
-<main class="container">
-    <section class="card hero">
-        <div class="hero-text">
-            <h1>Shambhavi <span>Karpe</span></h1>
-            <h3>Computer Science Engineer</h3>
-            <p style="color: var(--text-dim); margin-top: 10px;">Crafting intelligent systems through Data Analysis & AI.</p>
-            <div class="tag-container">
-                <span class="tag">AI Research</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Problem Solver</span>
-            </div>
-        </div>
-        <img src="images/profile.jpeg" alt="Shambhavi" class="profile-img">
-    </section>
+<!-- Navbar -->
+<nav>
+    <h2>Shambhavi</h2>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="about" class="card about">
-        <h2>About</h2>
-        <p style="font-size: 0.9rem; color: var(--text-dim);">
-            I focus on building logical, efficient systems that solve real-world problems. Currently exploring the intersection of AI and human-centric design.
+<!-- Home -->
+<section id="home" class="home">
+    <img src="images/profile.jpg" class="profile">
+    <h1>Hi, I'm Shambhavi 👋</h1>
+    <h2><span id="typing"></span><span class="cursor">|</span></h2>
+    <a href="resume.pdf" download class="btn">Download Resume</a>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="card glass" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate Computer Science student with a strong interest in Artificial Intelligence, Web Development, and problem solving.
+            I enjoy building real-world projects that combine creativity with technology.
+            Currently improving my skills in JavaScript, AI systems, and modern web design.
         </p>
-    </section>
-
-    <section id="education" class="card education">
-        <h2>Education</h2>
-        <div style="margin-bottom: 1rem;">
-            <p><strong>B.Tech CSE</strong></p>
-            <p style="color: var(--text-dim); font-size: 0.8rem;">MIT VPU | 2025 - Present</p>
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-dim);">SMP Murum & Pratibha Niketan</p>
-    </section>
-
-    <section id="projects" class="card projects">
-        <h2>Selected Projects</h2>
-        <ul class="project-list">
-            <li>
-                <span>AI4All: Mental Health</span>
-                <span style="color: var(--accent)">→</span>
-            </li>
-            <li>
-                <span>Smart Dining Space</span>
-                <span style="color: var(--accent)">→</span>
-            </li>
-            <li>
-                <span>E-Waste Metal Recovery</span>
-                <span style="color: var(--accent)">→</span>
-            </li>
-        </ul>
-    </section>
-
-    <section id="certificates" class="card certificates">
-    <h2>Certifications</h2>
-    <p style="font-size: 0.8rem; color: var(--text-dim); margin-bottom: 10px;">
-        Click or hover to inspect credentials.
-    </p>
-    <div class="cert-mini-grid">
-        <img src="images/c1.jpeg" alt="Machine Learning Cert">
-        <img src="images/c2.jpeg" alt="Data Science Cert">
-        <img src="images/c3.jpeg" alt="AI Research Cert">
-        <img src="images/c4.jpeg" alt="Web Dev Cert">
     </div>
 </section>
 
-    <section id="contact" class="card contact">
-        <h2>Let's Collaborate</h2>
-        <p>shambhavikarpe12@gmail.com</p>
-        <div class="tag-container" style="justify-content: center; margin-top: 20px;">
-            <a href="https://github.com/shambhavikarpe1206-dotcom" class="tag" style="text-decoration: none;">GitHub</a>
-            <a href="#" class="tag" style="text-decoration: none;">LinkedIn</a>
+<!-- Skills -->
+<section id="skills">
+    <h2 data-aos="fade-up">Skills & Tools</h2>
+    <div class="card glass" data-aos="fade-up">
+        <p><strong>Languages:</strong> C, C++, JavaScript, Python</p>
+        <p><strong>Web:</strong> HTML, CSS, React (learning)</p>
+        <p><strong>Tools:</strong> Git, GitHub, VS Code</p>
+        <p><strong>Domains:</strong> AI, Web Development</p>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 data-aos="fade-up">Projects</h2>
+
+    <div class="project-grid">
+
+        <div class="project-card" onclick="openPopup('AI-based system providing emotional support.')">
+            <h3>AI Mental Health</h3>
+            <p>AI system for emotional support</p>
+            <p><strong>Tech:</strong> Python</p>
         </div>
-    </section>
-</main>
+
+        <div class="project-card" onclick="openPopup('Smart web-based dining system.')">
+            <h3>Smart Dining</h3>
+            <p>Web-based dining system</p>
+            <p><strong>Tech:</strong> HTML, CSS, JS</p>
+        </div>
+
+        <div class="project-card" onclick="openPopup('Metal recovery system from e-waste.')">
+            <h3>E-Waste Recovery</h3>
+            <p>Metal recovery system</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Achievements -->
+<section id="achievements">
+    <h2 data-aos="fade-up">Achievements</h2>
+    <div class="card glass" data-aos="fade-up">
+        <ul>
+            <li>Participated in coding competitions</li>
+            <li>Built multiple web projects</li>
+            <li>Learning AI & modern technologies</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <div class="card glass" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Email: shambhavikarpe12@gmail.com</p>
+        <p>
+            <a href="#">GitHub</a> |
+            <a href="#">LinkedIn</a>
+        </p>
+    </div>
+</section>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span onclick="closePopup()">×</span>
+        <p id="popup-text"></p>
+    </div>
+</div>
 
 <footer>
-    <p>© 2026 Shambhavi Karpe • Designed with Code</p>
+    <p>© 2026 Shambhavi Karpe</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
