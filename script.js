@@ -63,3 +63,12 @@ AOS.init({
     duration: 1000,
     once: true
 });
+// Certificate popup
+function openCert(src) {
+    document.getElementById("cert-popup").style.display = "block";
+    document.getElementById("cert-preview").src = src;
+}
+
+function closeCert() {
+    document.getElementById("cert-popup").style.display = "none";
+}
